@@ -16,9 +16,7 @@
 package org.lineageos.recorder.service;
 
 import android.Manifest;
-import android.content.Context;
 import android.media.MediaRecorder;
-import android.os.Build;
 
 import androidx.annotation.RequiresPermission;
 
@@ -31,20 +29,11 @@ public class GoodQualityRecorder implements SoundRecording {
 
     private MediaRecorder mRecorder = null;
     private boolean mIsPaused = false;
-    private final Context mContext;
-
-    public GoodQualityRecorder(Context context) {
-        this.mContext = context;
-    }
 
     @Override
     @RequiresPermission(Manifest.permission.RECORD_AUDIO)
     public void startRecording(Path path) throws IOException {
-        if (Build.VERSION.SDK_INT >= 31) {
-            mRecorder = new MediaRecorder(mContext);
-        } else {
-            mRecorder = new MediaRecorder();
-        }
+        mRecorder = new MediaRecorder();
         mRecorder.setOutputFile(path.toFile());
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
