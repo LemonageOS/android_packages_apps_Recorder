@@ -42,7 +42,7 @@ public final class PreferencesManager {
     }
 
     public boolean getRecordInHighQuality() {
-        return mPreferences.getInt(PREF_RECORDING_QUALITY, 0) == 1;
+        return mPreferences.getInt(PREF_RECORDING_QUALITY, 1) == 1;
     }
 
     public void setTagWithLocation(boolean tagWithLocation) {
