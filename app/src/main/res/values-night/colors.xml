@@ -14,9 +14,11 @@
      limitations under the License.
 -->
 <resources>
-    <color name="colorPrimary">#121212</color>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#F2B077</color>
+    <color name="colorPrimary">@*android:color/monet_default_background</color>
+    <color name="colorPrimaryDark">@*android:color/monet_default_background</color>
+    <color name="colorAccent">@*android:color/accent_device_default_dark</color>
 
     <color name="wave">#12FFFFFF</color>
+
+    <color name="btn_record_icon">@*android:color/primary_device_default_dark</color>
 </resources>

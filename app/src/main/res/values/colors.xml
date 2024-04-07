@@ -21,4 +21,6 @@
     <color name="white">#fafafa</color>
 
     <color name="wave">#12000000</color>
+
+    <color name="btn_record_icon">#ffffffff</color>
 </resources>
